@@ -40,3 +40,6 @@ describe "Artist" do
   end
 
 end
+
+# <p>Genre: <a href = "/genres/<%= @artist.genres.slug %>" <%= @artist.genres.name %>></p>
+# 
