@@ -1,8 +1,8 @@
 
-<form method="POST" action='/songs/:slug'>
+<form method="POST" action="/songs/<%= @song.slug %>">
 <input type="text" name="Name" value=@song.name>
 <input type="hidden" name="_method" value="PATCH">
-<input type="text" name="Artist Name" value=@song.artist.name>
+<input type="text" name="Artist Name">
 <% @song.genres.each do |genre| %>
     <label> <%= genre.name %>: <input
       id="<%= genre.name %>"
@@ -11,5 +11,5 @@
       value="<%= genre.id %>"
     ></label>
     <% end %>
-<input type="submit" value="Create">
+    <input type="submit" name="Save"/> 
 </form>
